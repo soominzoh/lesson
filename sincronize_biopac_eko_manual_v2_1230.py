@@ -18,7 +18,7 @@ warnings.filterwarnings("ignore", category=UserWarning, module="matplotlib")
 # (A) 공통 함수들
 # -------------------------------------------------
 def bandpass_filter(data, lowcut, highcut, fs, order=4):
-    nyquist = 0.5 * fs
+    nyquist = 0.5 * fs # add blame
     low = lowcut / nyquist
     high = highcut / nyquist
     b, a = butter(order, [low, high], btype='band')
